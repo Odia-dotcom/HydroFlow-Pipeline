@@ -5,4 +5,3 @@ __pycache__/
 
 # Exclude all data files
 *.csv
-

@@ -4,6 +4,7 @@ import pandas as pd
 import plotly.express as px
 from geopy.geocoders import Nominatim
 import requests
+import openmeteo_requests
 import time
 
 # Initialize Geocoder
@@ -17,6 +18,7 @@ st.set_page_config(
 )
 
 # 2. Live API Extraction & Transformation Helper
+@st.cache_data(ttl=3600)
 def fetch_live_metrics(lat, lon):
     """Queries Open-Meteo directly and prints live diagnostic errors if it fails."""
     url = (
@@ -42,11 +44,11 @@ def fetch_live_metrics(lat, lon):
         return None
 
 # 3. Main Dashboard Title & Header
-st.title("🌍 Africa Water Shortage & Drought Risk Tracker")
+st.title("🌍 Water Shortage & Drought Risk Tracker")
 st.markdown("""
 **Welcome to the HydroFlow Platform.** 
 
-This interactive hub monitors daily environmental conditions to track water scarcity and predict drought risks across key regions in Africa. 
+This interactive hub monitors daily environmental conditions to track water scarcity and predict drought risks across key regions in the world. 
 
 By analyzing local rainfall trends and underground soil moisture levels, this system automatically calculates a **Shortage Probability Score**. This score helps communities, farmers, and decision-makers anticipate water stress and prepare before it turns into a critical shortage.Use the search box in the left sidebar to enter any city or region. 
 """)
@@ -54,9 +56,9 @@ By analyzing local rainfall trends and underground soil moisture levels, this sy
 # 4. Sidebar Live Search Engine Controls
 user_query = st.sidebar.text_input(
     label="🔍 Search any location", 
-    value="Dodoma", 
-    placeholder="Type any city or region in Africa...",
-    help="Examples: Nairobi, Casablanca, Soweto, Timbuktu, Luanda"
+    value="", 
+    placeholder="Type any city or region in the world...",
+    help="Examples: Nairobi, Paris, Soweto, Mexico, Luanda"
 )
 
 if user_query:
