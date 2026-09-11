@@ -4,3 +4,6 @@ pandas==3.0.5
 plotly==7.0.0
 Requests==2.34.2
 streamlit==1.63.0
+openmeteo-requests
+requests-cache
+retry-requests
