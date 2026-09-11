@@ -12,7 +12,7 @@ geolocator = Nominatim(user_agent="hydroflow_live_user_app")
 
 # 1. Page Configuration (Visual Layout)
 st.set_page_config(
-    page_title="Africa Water Shortage Monitoring Hub",
+    page_title="Water Shortage Monitoring Hub",
     layout="wide",
     initial_sidebar_state="expanded"
 )
