@@ -1,11 +1,11 @@
 # HydroFlow-Pipeline
-# 🌊 HydroFlow-Pipeline: A Simple, Smart Water Shortage Tracker for Africa
+# 🌊 HydroFlow-Pipeline: A Simple, Smart Water Shortage Tracker for the World
 
-HydroFlow-Pipeline is an automated data tool that looks at real-time environmental data to track water scarcity and predict drought risks across Africa. 
+HydroFlow-Pipeline is an automated data tool that looks at real-time environmental data to track water scarcity and predict drought risks globally. 
 
-Instead of showing static, pre-made charts, this app lets users type in **any African city or region**. The backend instantly finds the coordinates on a map, downloads live climate logs, and calculates a dynamic water shortage risk score.
+Instead of showing static, pre-made charts, this app lets users type in **any city or region in the world**. The backend instantly finds the coordinates on a map, downloads live climate logs, and calculates a dynamic water shortage risk score.
 
-🚀 **Live Dashboard Link:** [will insert Streamlit URL Here]  
+🚀 **Live Dashboard Link:** [https://hydroflow-pipeline-ohhthxgtqwnfpr8djynpjj.streamlit.app/]  
 
 ---
 
