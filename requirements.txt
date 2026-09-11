@@ -1,0 +1,6 @@
+duckdb==1.5.5
+geopy==2.5.0
+pandas==3.0.5
+plotly==7.0.0
+Requests==2.34.2
+streamlit==1.63.0
